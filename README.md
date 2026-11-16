@@ -1,17 +1,16 @@
-# NOOBESAG — Persian Browser Games
+# NOOBESAG
 
-This repository is intended to host three browser games with a shared landing page:
+Persian browser-game portal using the original **Noobe Sag Divine v3** host page.
 
-- Noobe Sag (`games/noobe-sag.html`)
-- Ghobaar 2 (`games/ghobaar-2.html`)
-- Age of Shahanshahs (`games/age-of-shahanshahs.html`)
+- Homepage: `index.html`
+- Ghobaar 2: `games/ghobaar-2.html`
+- Age of Shahanshahs: `games/age-of-shahanshahs.html`
+- Host artwork: `assets/noobe-art-00.js` through `assets/noobe-art-08.js` (parts of the original inline artwork, reconstructed in the browser)
 
-## Publishing
+The two game buttons on the original homepage launch their independent HTML files in an in-page fullscreen overlay. Noobe Sag's offline build does not provide functioning server-side accounts, tournaments, or ranked player storage.
 
-Upload the prepared `Noobesag-GitHub-Pages.zip` **after extracting it**: drag `index.html`, the `games` folder, `.nojekyll`, and `README.md` to the repository's main branch using **Add file → Upload files**. Once uploaded, set up GitHub Pages in **Settings → Pages → Deploy from a branch → main / (root)**. For public access, make this repository public (or use a plan that supports Pages from private repositories).
+## Deployment
 
-Expected live URL after deployment: https://memortal.github.io/Noobesag/
+The `CNAME` file sets `www.noobsesag.com` as the custom domain. Enable GitHub Pages from `main` at repository root, set the custom domain to `www.noobsesag.com`, and configure Porkbun DNS (www CNAME to `memortal.github.io`; apex A records per GitHub Pages documentation). Publishing may require making this repository public on your GitHub plan.
 
-Custom `noobesag.com` setup can follow after domain acquisition.
-
-GitHub Pages hosts static front-end games. Real-time multiplayer and persistent accounts need an external backend.
+Do not remove the `assets` folder: it contains pieces of the host-page image.
